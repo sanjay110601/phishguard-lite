@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhishGuard Pro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>🛡️ PhishGuard Pro</h1>
+
+  <!-- Screenshot Upload -->
+  <div class="card">
+    <label>📸 Drag & Drop Screenshot/Image or click to browse</label>
+    <input type="file" id="imageInput">
+    <button onclick="analyzeScreenshot()">Analyze Screenshot 🔍</button>
+  </div>
+
+  <!-- Text Input -->
+  <div class="card">
+    <label>📝 Paste message here...</label>
+    <textarea id="textInput" placeholder="Type or paste message..."></textarea>
+    <button onclick="analyzeText()">Analyze Text ✏️</button>
+  </div>
+
+  <!-- Website Scan -->
+  <div class="card">
+    <label>🌐 Enter Website URL to Scan</label>
+    <input type="url" id="urlInput" placeholder="https://example.com">
+    <button onclick="analyzeWebsite()">Scan Website 🌍</button>
+  </div>
+
+  <!-- Results -->
+  <div class="card">
+    <h2>📊 Scan History</h2>
+    <pre id="history">No scans yet...</pre>
+    <button onclick="refreshHistory()">Refresh History 🔄</button>
+  </div>
+
+  <div class="card">
+    <h2>📈 Weekly Stats</h2>
+    <pre id="stats">Low: 0 | Medium: 0 | High: 0</pre>
+    <button onclick="refreshStats()">Refresh Stats 🔄</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
